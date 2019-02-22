@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.text-normal {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.button-text {
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+}
+
+/* Sidebar Header */
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar-header {
+    display: grid;
+    position: fixed;
+    width: 250px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    justify-content: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar-header > #header-content-wrapper {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-column-gap: 0px;
+    align-items: center;
+}
+
+#sidebar-header-logo {
+    width: 80px;
+    height: 80px;
+}
+
+#sidebar-header-text {
+    color: #E11E22;
+    font-size: 48px;
+    margin-left: -15px;
+}
+
+/* Sidebar Buttons */
+
+#sidebar-buttons-wrapper {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.sidebar-button {
+    display: grid;
+    width: 250px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+}
