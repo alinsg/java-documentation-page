@@ -110,7 +110,9 @@ a {
     font-size: 24px;
 }
 
-.list-item-text {
+article > ul > li {
+    /* I've chosen to do this instead of adding a class to each list item
+    for a more lisible HTML code */
     margin-top: 4px;
     margin-bottom: 4px;
     font-family: Puritan;
@@ -119,6 +121,30 @@ a {
     line-height: normal;
     font-size: 18px;
     color: #000000;
+}
+
+.article-text {
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2em ;
+    font-size: 16px;
+    margin-left: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+article > p {
+    /* The same as for the list items. HTML code would be very verbose
+    with adding a class to every p element */
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2em ;
+    font-size: 16px;
+    margin-left: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 code {
@@ -136,17 +162,6 @@ code {
     width: 97%;
     margin-top: 8px;
     border-radius:5px;
-}
-
-.article-text {
-    font-family: 'Quattrocento Sans';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.2em ;
-    font-size: 16px;
-    margin-left: 0px;
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 #main-doc {

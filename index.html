@@ -27,8 +27,11 @@
                 <a href="#Hello_World" class="nav-link"><div class="sidebar-button">
                     <p class="text-normal button-text">Hello World</p>
                 </div></a>
-                <a href="#" class="nav-link"><div class="sidebar-button">
+                <a href="#Variables" class="nav-link"><div class="sidebar-button">
                     <p class="text-normal button-text">Variables</p>
+                </div></a>
+                <a href="#Variable_scope" class="nav-link"><div class="sidebar-button">
+                    <p class="text-normal button-text">Variable scope</p>
                 </div></a>
             </div>
         </nav>
@@ -42,12 +45,11 @@
                     <!--
                     <li class="list-item-text">Console printing</li>
                     <code class="code">System.out.println("Hello World")</code>
-                    <li class="list-item-text">Variables</li>
                     <p class="article-text">Below are the most used data types used in Java along with declaration examples</p>
                     -->
-                    <p class="article-text">Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
-                    <p class="article-text">Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the most popular programming languages in use, particularly for client-server web applications, with a reported 9 million developers. Java was originally developed by James Gosling, a Canadian, at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its original features from SmallTalk, with a syntax similar to C and C++, but it has fewer low-level facilities than either of them.</p>
-                    <p class="article-text" style="font-style: italic">For more general information about the language you can check the <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="blank">Wikipedia</a> entry</p>
+                    <p>Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+                    <p>Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the most popular programming languages in use, particularly for client-server web applications, with a reported 9 million developers. Java was originally developed by James Gosling, a Canadian, at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its original features from SmallTalk, with a syntax similar to C and C++, but it has fewer low-level facilities than either of them.</p>
+                    <p style="font-style: italic">For more general information about the language you can check the <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="blank">Wikipedia</a> entry</p>
                 </article>
             </section>
             <section id="Hello_World" class="main-section">
@@ -55,8 +57,8 @@
                     <h2 class="section-header-text text-normal">Hello World</h2>
                 </header>
                 <article class="section-article">
-                    <p class="article-text">To get started I recommend <strong>jDoodle</strong>'s online <a href="https://www.jdoodle.com/online-java-compiler" target="_blank">Java compiler.</a></p>
-                    <p class="article-text">Just copy/write the below code in the editor and then click "Execute"</p>
+                    <p>To get started I recommend <strong>jDoodle</strong>'s online <a href="https://www.jdoodle.com/online-java-compiler" target="_blank">Java compiler.</a></p>
+                    <p>Just copy/write the below code in the editor and then click "Execute"</p>
                     <code>
 <!--                 -->public class MyClass {
 <!--                 -->    public static void main(String args[]) {
@@ -64,15 +66,65 @@
 <!--                 -->    }
 <!--                 -->}
                     </code>
-                    <p class="article-text">The above code prints the message "Hello World!" in the console.</p>
+                    <p>The above code prints the message "Hello World!" in the console.</p>
                 </article>
             </section>
-            <section>
+            <section id="Variables" class="main-section">
                 <header class="section-header">
                     <h2 class="section-header-text text-normal">Variables</h2>
                 </header>
                 <article class="section-article">
-                    
+                    <p>Although Java is object oriented, not all types are objects. It is built on top of basic variable types called primitives.</p>
+                    <p>Here's a list of all primitives in Java</p>
+                    <ul>
+                        <li><strong>byte</strong> (number)</li>
+                        <li><strong>short</strong> (number)</li>
+                        <li><strong>int</strong> (number)</li>
+                        <li><strong>long</strong> (number)</li>
+                        <li><strong>float</strong> (float number)</li>
+                        <li><strong>double</strong> (float number)</li>
+                        <li><strong>char</strong> (a character)</li>
+                        <li><strong>boolean</strong> (true or false)</li>
+                    </ul>
+                    <p>You can declare variables like this:</p>
+                    <p style="font-style: italic">Developers have adopted a naming convention for variables called <strong>camelCase</strong></p>
+                    <p><strong>variableType variableName = value;</strong></p>
+                    <p style="font-style: italic">The examples below show how to declare some types of variables</p>
+                    <code>int integerNumber = 2;</code>
+                    <code>double floatingPointNumber = 3.14;</code>
+                </article>
+            </section>
+            <section id="Variable_scope" class="main-section">
+                <header class="section-header">
+                    <h2 class="section-header-text text-normal">Variable scope</h2>
+                </header>
+                <article class="section-article">
+                    <p>Variables declared outside of a method are called <strong><i>Global Variables</i></strong>. Those variables can be called and accessed by every method.</p>
+                    <p style="font-style: italic">For example:</p>
+                    <code>
+<!--                   -->public class MyClass {
+<!--                   -->  private int myAge = 21;
+<!--                   -->  
+<!--                   -->  public static void main() {
+<!--                   -->      int myAgeInSevenYears = myName + 7;
+<!--                   -->  }
+<!--                   -->}
+                    </code>
+                    <p>The code above will work because the <i>myAge</i> variable can be accessed from inside of the main me
+                    <p>Variables declared inside of a method can be accessed only by that method and are called <strong><i>Local variables</i></strong>.</p>
+                    <code>
+<!--                   -->public class MyClass {
+<!--                   -->  
+<!--                   -->  public static void main() {
+<!--                   -->      int myAge =  21;
+<!--                   -->  }
+<!--                   -->
+<!--                   -->  public static void ageInSevenYears {
+<!--                   -->      int myAgeInSevenYears = myAge + 7;  
+<!--                   -->  }
+<!--                   -->}
+                    </code>
+                    <p>The code above would not work because the <i>ageInSevenYears</i> method can't access the <i>myAge</i> variable declared in the main method.</p>
                 </article>
             </section>
         </main>
