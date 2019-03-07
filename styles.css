@@ -33,7 +33,7 @@ a {
 
 #sidebar-header {
     display: grid;
-    position: fixed;
+    position: absolute;
     width: 251px;
     height: 100px;
     left: 0px;
@@ -177,4 +177,20 @@ code {
     padding-top: 10px;
     padding-right: 60px;
     padding-bottom: 10px;
+}
+
+/* Media queries */
+
+@media (max-width: 370px) {
+    #navbar {
+        left: -10000px;
+        width: 1px;
+    }
+
+    #main-doc {
+        margin: 0px;
+        position: absolute;
+        z-index: 99;
+        left: 0px;
+    }
 }
